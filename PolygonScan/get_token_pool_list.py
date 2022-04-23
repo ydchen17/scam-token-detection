@@ -7,7 +7,7 @@ import json
 from web3 import Web3, HTTPProvider
 from hexbytes import HexBytes
 from web3.datastructures import AttributeDict
-
+from Utils.eth_utils import  obtain_hash_event
 
 def connect_to_web3():
     """
@@ -21,15 +21,17 @@ def connect_to_web3():
     res = web3.isConnected()
     return res, web3
 
-from_block = 0
+from_block = 22757547
 response = [0] * 1000
 block_number = []
 _, web3 = connect_to_web3()
 contract = web3.eth.contract(shared.UNISWAP_V3_FACTORY, abi=shared.ABI_FACTORY)
 
 topic = "0x783cca1c0412dd0d695e784568c96da2e9c22ff989357a2e8b1d9b2b4e6b7118"
+# topic = obtain_hash_event('PoolCreated(address,address,uint24,int24,address')
 
-tokens0, tokens1, pools, block_numbers, timestamps, fees = [], [], [], [], [],[]
+
+tokens0, tokens1, pools, block_numbers, timestamps, fees = [], [], [], [], [], []
 cont = 1000
 while len(response) >= 1000:
     try:

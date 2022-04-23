@@ -141,7 +141,7 @@ def init():
     ABI_POOL = open(ROOT_FOLDER + "/abi_pool.txt").read()
     ABI_ROUTER = open(ROOT_FOLDER + "/abi_router.txt").read()
     # Define global objects
-    BLOCKSTUDY = 22162670
+    BLOCKSTUDY = 27476347
     #
     PRIVATE_KEY = ""
 
