@@ -7,7 +7,7 @@ The main purpose of this work in progress is to label and predict rug pulls on U
 Using the tools provided, you can download all the important data related to a token. Moreover, the model trained in this repo will allow users to protect themself from potential malicious and scam tokens!
 
 <p align="center">
-<img src="AdversaryMM.png" width="60%" />
+<img src="AdversaryMM.png" width="40%" />
 </p>
 
 # Objective
