@@ -18,6 +18,11 @@ Label tokens as scams and prevent users from falling to honeypots and potential 
 
 # Data obtained in Polygon network
 
+Distribution of Mint, Burn and Swap events on UniswapV3 pools.
+
+<p align="center">
+<img src="examples_operations.png" width="50%" />
+</p>
 
 
 
