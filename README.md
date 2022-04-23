@@ -18,7 +18,7 @@ Label tokens as scams and prevent users from falling to honeypots and potential 
 
 # Data obtained in Polygon network
 
-Distribution of Mint, Burn and Swap events on UniswapV3 pools.
+Distribution of Mint, Burn and Swap events on UniswapV3 pools. Two big and reputated tokens and two rug pulls. Can you guess which ones are rug pulls?
 
 <p align="center">
 <img src="examples_operations.png" width="50%" />
