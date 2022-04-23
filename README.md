@@ -9,7 +9,7 @@ Using the tools provided, you can download all the important data related to a t
 Tagg tokens as scams and prevent users from falling to honeypots and potential rug pulls.
 
     <p align="center">
-    <img src="evaluation_points.png " width="60%" />
+    <img src="AdversaryMM.png" width="60%" />
     </p>
 
 # Future work:
