@@ -15,6 +15,12 @@ Using the tools provided, you can download all the important data related to a t
 Label tokens as scams and prevent users from falling to honeypots and potential rug pulls. Give a tool to users and FrontEnds to whitelist and blacklist tokens on different DEXs.
 
 
+
+# Data obtained in Polygon network
+
+
+
+
 # Future work:
 
 - Improve understanding of liquidity in Uniswap V3.
