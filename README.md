@@ -7,15 +7,12 @@ The main purpose of this work in progress is to label and predict rug pulls on U
 Using the tools provided, you can download all the important data related to a token. Moreover, the model trained in this repo will allow users to protect themself from potential malicious and scam tokens!
 
 <p align="center">
-<img src="AdversaryMM.png" width="40%" />
+<img src="amm.png" width="50%" />
 </p>
-
 # Objective
 
 
-<p align="center">
-<img src="amm.png" width="30%" />
-</p>
+
 
 Label tokens as scams and prevent users from falling to honeypots and potential rug pulls. Give a tool to users and FrontEnds to whitelist and blacklist tokens on different DEXs.
 
