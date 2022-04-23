@@ -31,7 +31,7 @@ Rug pulls are profitable if their malicious act is done before they are discover
 Our model obtains an accuracy Accuracy of 0.9011, recall of 0.9684 and precision of 0.9248 and F1 of 0.9461 in distinguishing scams from non-malicious tokens. 
 
 <p align="center">
-<img src="results.png" width="40%" />
+<img src="results.png" width="35%" />
 </p>
 
 
