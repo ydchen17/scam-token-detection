@@ -15,7 +15,6 @@ Using the tools provided, you can download all the important data related to a t
 Label tokens as scams and prevent users from falling to honeypots and potential rug pulls. Give a tool to users and FrontEnds to whitelist and blacklist tokens on different DEXs.
 
 
-
 # Data obtained in Polygon network
 
 Distribution of Mint, Burn and Swap events on UniswapV3 pools. Two big and reputated tokens and two rug pulls. Can you guess which ones are rug pulls?
@@ -25,6 +24,10 @@ Distribution of Mint, Burn and Swap events on UniswapV3 pools. Two big and reput
 </p>
 
 
+# ML
+Rug pulls are profitable if their malicious act is done before they are discovered. Therefore, most rug pulls occur in the first 24 hours after the pool is created. This encourages us to build a tool to detect malicious tokens at startup. For each labelled token, we have computed its features at hour 24 after its pool creation. Then, we trained XGBoost with those features. In particular, we used a 5-Fold Cross Validation to evaluate the model performance.
+
+# Results
 
 # Future work:
 
