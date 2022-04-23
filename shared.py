@@ -57,6 +57,7 @@ def init():
     global NO_ARB_ID
     global UNISWAP_V3_FACTORY
     global LOCAL_NONCE
+    global timestamp_study
 
     ROOT_FOLDER = subprocess.run(["git", "rev-parse", "--show-toplevel"], check=True, universal_newlines=True,
                                  stdout=subprocess.PIPE).stdout.strip()
@@ -142,6 +143,8 @@ def init():
     ABI_ROUTER = open(ROOT_FOLDER + "/abi_router.txt").read()
     # Define global objects
     BLOCKSTUDY = 27476347
+    timestamp_study = 1650710999
+
     #
     PRIVATE_KEY = ""
 
