@@ -55,6 +55,7 @@ def init():
     global web3
     global multicall
     global NO_ARB_ID
+    global UNISWAP_V3
     global LOCAL_NONCE
 
     ROOT_FOLDER = subprocess.run(["git", "rev-parse", "--show-toplevel"], check=True, universal_newlines=True,
@@ -88,6 +89,7 @@ def init():
     FAKE_POOL = config.get("POOLS", "FAKE_POOL")
 
     # Get pools factories
+    UNISWAP_V3 = "0x1F98431c8aD98523631AE4a59f267346ea31F984"
     QUICKSWAP_FACTORY = config.get("FACTORIES", "QUICKSWAP_FACTORY")
     SUSHISWAP_FACTORY = config.get("FACTORIES", "SUSHISWAP_FACTORY")
     JETSWAP_FACTORY = config.get("FACTORIES", "JETSWAP_FACTORY")

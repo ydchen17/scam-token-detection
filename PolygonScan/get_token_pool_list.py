@@ -25,11 +25,11 @@ from_block = 0
 response = [0] * 1000
 block_number = []
 _, web3 = connect_to_web3()
-contract = web3.eth.contract(shared.FACTORIES['sushiswap'], abi=shared.ABI_FACTORY)
+contract = web3.eth.contract(shared.UNISWAP_V3_FACTORY, abi=shared.ABI_FACTORY)
 
-topic = "0x0d3648bd0f6ba80134a33ba9275ac585d9d315f0ad8355cddefde31afa28d0e9"
+topic = "0x783cca1c0412dd0d695e784568c96da2e9c22ff989357a2e8b1d9b2b4e6b7118"
 
-tokens0, tokens1, pairs, block_numbers, timestamps = [], [], [], [], []
+tokens0, tokens1, pools, block_numbers, timestamps, fees = [], [], [], [], [],[]
 cont = 1000
 while len(response) >= 1000:
     try:
@@ -59,12 +59,13 @@ while len(response) >= 1000:
                 'blockHash': HexBytes(event['transactionHash'])
             }))
         log_dict = {'logs': receipts}
-        decoded_logs = contract.events.PairCreated().processReceipt(log_dict)
+        decoded_logs = contract.events.PoolCreated().processReceipt(log_dict)
         for k, log in enumerate(decoded_logs):
             block_numbers.append(log['blockNumber'])
             tokens0.append(log['args']["token0"])
             tokens1.append(log['args']['token1'])
-            pairs.append(log['args']['pair'])
+            pools.append(log['args']['pool'])
+            fees.append(log['args']['fee'])
             timestamps.append(int(response[k]['timeStamp'], 16))
         from_block = int(response[-1]['blockNumber'], 16) + 1
 
@@ -72,5 +73,5 @@ while len(response) >= 1000:
         print(err)
         time.sleep(2)
 
-pd.DataFrame({'pair': pairs, 'token0': tokens0, 'token1': tokens1, 'block_number': block_numbers, 'timestamp': timestamps}).to_csv(
+pd.DataFrame({'pair': pools, 'token0': tokens0, 'token1': tokens1, 'fees':fees, 'block_number': block_numbers, 'timestamp': timestamps}).to_csv(
     "../data/SUSHISWAP/polygon_pools.csv", index=False)
