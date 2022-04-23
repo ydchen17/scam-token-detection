@@ -29,6 +29,11 @@ Rug pulls are profitable if their malicious act is done before they are discover
 
 # Results
 
+<p align="center">
+<img src="results.png" width="50%" />
+</p>
+
+
 # Future work:
 
 - Improve understanding of liquidity in Uniswap V3.
