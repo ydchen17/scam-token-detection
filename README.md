@@ -14,7 +14,7 @@ Using the tools provided, you can download all the important data related to a t
 
 
 <p align="center">
-<img src="mad_police.png" width="30%" />
+<img src="amm.png" width="30%" />
 </p>
 
 Label tokens as scams and prevent users from falling to honeypots and potential rug pulls. Give a tool to users and FrontEnds to whitelist and blacklist tokens on different DEXs.
