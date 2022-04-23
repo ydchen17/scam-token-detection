@@ -40,7 +40,7 @@ while len(response) >= 1000:
                    "&action=getLogs" \
                    f"&fromBlock={from_block}" \
                    f"&toBlock={shared.BLOCKSTUDY}" \
-                   f"&address={shared.FACTORIES['sushiswap']}" \
+                   f"&address={shared.UNISWAP_V3_FACTORY}" \
                    f"&topic0={topic}" \
                    f"&apikey={apikey}"
 
@@ -73,5 +73,5 @@ while len(response) >= 1000:
         print(err)
         time.sleep(2)
 
-pd.DataFrame({'pair': pools, 'token0': tokens0, 'token1': tokens1, 'fees':fees, 'block_number': block_numbers, 'timestamp': timestamps}).to_csv(
-    "../data/SUSHISWAP/polygon_pools.csv", index=False)
+pd.DataFrame({'pair': pools, 'token0': tokens0, 'token1': tokens1, 'fees': fees, 'block_number': block_numbers, 'timestamp': timestamps}).to_csv(
+    "../data/polygon_pools.csv", index=False)
