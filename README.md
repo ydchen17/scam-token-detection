@@ -28,6 +28,6 @@ Label tokens as scams and prevent users from falling to honeypots and potential 
 - Improve understanding of liquidity in Uniswap V3.
 - Fuzz testing on Token smart contract.
 - Generalize concepts as Gini coefficient in Uniswap V3 LP tokens.
-- 
+- Simplify UX.
 
 
