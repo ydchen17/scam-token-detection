@@ -28,6 +28,7 @@ Distribution of Mint, Burn and Swap events on UniswapV3 pools. Two big and reput
 Rug pulls are profitable if their malicious act is done before they are discovered. Therefore, most rug pulls occur in the first 24 hours after the pool is created. This encourages us to build a tool to detect malicious tokens at startup. For each labelled token, we have computed its features at hour 24 after its pool creation. Then, we trained XGBoost with those features. In particular, we used a 5-Fold Cross Validation to evaluate the model performance.
 
 # Results
+Accuracy of 0.9011, recall of 0.9684 and precision of 0.9248 and F1 of 0.9461 in distinguishing scams from non-malicious tokens. 
 
 <p align="center">
 <img src="results.png" width="30%" />
