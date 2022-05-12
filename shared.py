@@ -56,6 +56,8 @@ def init():
     global multicall
     global NO_ARB_ID
     global UNISWAP_V3_FACTORY
+    global UNISWAP_V2_FACTORY
+    global SUSHI_ABI_FACTORY
     global LOCAL_NONCE
     global timestamp_study
 
@@ -75,6 +77,7 @@ def init():
     # Get tokens addresses
     ETH_ADDRESS = config.get("ADDRESS", "ETH_ADDRESS")
     DEAD_ADDRESS = config.get("ADDRESS", "DEAD_ADDRESS")
+    WETH = config.get("ADDRESS", "WETH_ADDRESS")
     WMATIC = config.get("ADDRESS", "WMATIC_ADDRESS")
     MULTICALL_CONTRACT = config.get("ADDRESS", "MULTICALL_CONTRACT")
 
@@ -91,6 +94,7 @@ def init():
 
     # Get pools factories
     UNISWAP_V3_FACTORY = "0x1F98431c8aD98523631AE4a59f267346ea31F984"
+    UNISWAP_V2_FACTORY = "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f"
     QUICKSWAP_FACTORY = config.get("FACTORIES", "QUICKSWAP_FACTORY")
     SUSHISWAP_FACTORY = config.get("FACTORIES", "SUSHISWAP_FACTORY")
     JETSWAP_FACTORY = config.get("FACTORIES", "JETSWAP_FACTORY")
@@ -139,6 +143,7 @@ def init():
     WEEK = 4 * 60 * 24 * 7
     ABI = open(ROOT_FOLDER + "/normal_token_abi.txt").read()
     ABI_FACTORY = open(ROOT_FOLDER + "/factory_abi.txt").read()
+    SUSHI_ABI_FACTORY = """[{"inputs":[{"internalType":"address","name":"_feeToSetter","type":"address"}],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"token0","type":"address"},{"indexed":true,"internalType":"address","name":"token1","type":"address"},{"indexed":false,"internalType":"address","name":"pair","type":"address"},{"indexed":false,"internalType":"uint256","name":"","type":"uint256"}],"name":"PairCreated","type":"event"},{"constant":true,"inputs":[{"internalType":"uint256","name":"","type":"uint256"}],"name":"allPairs","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"allPairsLength","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"tokenA","type":"address"},{"internalType":"address","name":"tokenB","type":"address"}],"name":"createPair","outputs":[{"internalType":"address","name":"pair","type":"address"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"feeTo","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"feeToSetter","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"","type":"address"},{"internalType":"address","name":"","type":"address"}],"name":"getPair","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"_feeTo","type":"address"}],"name":"setFeeTo","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"_feeToSetter","type":"address"}],"name":"setFeeToSetter","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}]"""
     ABI_POOL = open(ROOT_FOLDER + "/abi_pool.txt").read()
     ABI_ROUTER = open(ROOT_FOLDER + "/abi_router.txt").read()
     # Define global objects

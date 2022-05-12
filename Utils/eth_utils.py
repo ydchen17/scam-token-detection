@@ -36,12 +36,9 @@ def obtain_events_from_abi(abi: dict) -> list:
             for cont, element in enumerate(function['inputs']):
                 if cont == 0:
                     event += element['type']
-
                 else:
                     event += ','+element['type']
-
                 cont += 1
-
             event  += ')'
             events.append(event)
 
