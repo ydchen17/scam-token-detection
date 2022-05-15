@@ -14,7 +14,7 @@ hours_since_creation = 24
 pools = pd.read_csv(f"../data/polygon_pools.csv")
 pools = pools.loc[(pools.token0 == shared.WMATIC) | (pools.token1 == shared.WMATIC)]
 
-tokens = pd.read_csv(f"../data/labeled_tokens.csv")
+tokens = pd.read_csv(f"../data/labelled_tokens.csv")
 time_elapsed = 60*60*hours_since_creation
 
 total_features = {}
